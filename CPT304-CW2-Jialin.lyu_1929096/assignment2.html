@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Components Composition</title>
+
+</head>
+
+<body>
+    <div class="header">
+        <h2>Assignment 2 </h2>
+    </div>
+
+    <div>
+        <div class="year" style="margin-left: 30%;"> year <input type="text" value="" id="year"></div>
+        <br>
+        <div class="Country" style="margin-left: 17.1%;">Input your Country (eg. CN, US) <input type="text" value=""
+                id="Countrycode"></div>
+        <br>
+        <button type="button" class="Holiday" onclick="getHoliday()" style="margin-left: 35%;">Get Holiday List</button>
+    </div>
+
+    <table id="holidayTable" style="margin-top: 20px;"></table>
+
+    <div>
+        <div class="city" style="margin-left: 15%; margin-top: 20px;"> Input your City (eg. Harbin, New York) <input
+                type="text" value="" id="city"></div>
+        <br>
+        <button type="button" class="Hotel" onclick="getHotels()" style="margin-left: 35%
+        ;">Get Hotel List</button>
+    </div>
+
+    <table id="hotelTable" style="margin-top: 20px;"></table>
+
+
+
+    <div>
+        <br>
+        <button type="button" class="Weather" onclick="getweather()" style="margin-left: 35%;">Get Recent
+            Weather</button>
+
+    </div>
+    <table id="weatherTable" style="margin-top: 20px;">
+
+        <tbody id="weatherListBody"></tbody>
+    </table>
+
+
+    <script src="https://cdn.staticfile.org/jquery/1.8.3/jquery.min.js"></script>
+    <script src="getHoliday.js"></script>
+    <script src="getApitest.js"></script>
+    <script src="getHotel.js"></script>
+    <script src="getWeather.js"></script>
+</body>
+
+</html>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #fff;
+        color: #000;
+        margin: 0;
+        padding: 0;
+    }
+
+    .header {
+        background-color: #b57dff;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+        margin-bottom: 30px;
+    }
+
+    .Holiday {
+        color: rgb(255, 255, 255);
+        border-width: 1px;
+        border-color: #b57dff;
+        border-style: solid;
+        border-radius: 3px;
+        background-color: #b57dff;
+    }
+
+    .Holiday:hover {
+        color: #ffffff;
+        background-color: #888888;
+        border-color: #505050;
+    }
+
+    .Hotel {
+        color: rgb(255, 255, 255);
+        border-width: 1px;
+        border-color: #b57dff;
+        border-style: solid;
+        border-radius: 3px;
+        background-color: #b57dff
+    }
+
+    .Hotel:hover {
+        color: #ffffff;
+        background-color: #888888;
+        border-color: #505050;
+    }
+
+    .Weather {
+        color: rgb(255, 255, 255);
+        border-width: 1px;
+        border-color: #b57dff;
+        border-style: solid;
+        border-radius: 3px;
+        background-color: #b57dff
+    }
+
+    .Weather:hover {
+        color: #ffffff;
+        background-color: #888888;
+        border-color: #505050;
+    }
+
+
+    input[type="text"],
+    button {
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 1px solid #b57dff;
+    }
+    pre {
+        font-size: 16px;
+        white-space: pre-wrap;
+        background-color: #eee;
+        padding: 20px;
+        border-radius: 5px;
+        margin-bottom: 30px;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th,
+    td {
+        text-align: left;
+        padding: 8px;
+    }
+
+    th {
+        background-color: #b57dff;
+        color: white;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    tr:hover {
+        background-color: #ddd;
+    }
+</style>
